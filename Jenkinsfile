@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('installer') {
+      steps {
+        sh 'npm install'
+        sh 'npm run build'
+      }
+    }
+
   }
 }
